@@ -50,6 +50,25 @@ Russian | ru-RU
 
 Note that this is not an exhaustive list of supported languages. For a full list of supported languages and their corresponding codes, see the [SpeechRecognition documentation](https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages).
 
+### Common error
+
+```
+/pydub/utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Error: [Errno 2] No such file or directory: 'ffprobe'
+```
+
+How to fix it
+
+```
+# Ubuntu and Debian based: 
+sudo apt-get install ffmpeg
+# macOS:
+# brew install ffmpeg
+# Windows:
+# choco install ffmpeg
+```
+
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
